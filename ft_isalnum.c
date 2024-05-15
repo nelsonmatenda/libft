@@ -6,7 +6,7 @@
 /*   By: nfigueir <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/14 09:55:13 by nfigueir          #+#    #+#             */
-/*   Updated: 2024/05/14 13:07:35 by nfigueir         ###   ########.fr       */
+/*   Updated: 2024/05/15 12:52:38 by nfigueir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,3 +16,9 @@ int	ft_isalnum(int c)
 {
 	return (ft_isalpha(c) || ft_isdigit(c));
 }
+
+//int	main(void)
+//{
+//	if (ft_isalnum('a'))
+//		printf("sim");
+//}
