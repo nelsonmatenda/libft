@@ -6,7 +6,7 @@
 /*   By: nfigueir <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/14 10:13:54 by nfigueir          #+#    #+#             */
-/*   Updated: 2024/05/15 10:32:46 by nfigueir         ###   ########.fr       */
+/*   Updated: 2024/05/16 10:24:37 by nfigueir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,5 +21,5 @@
 int	ft_isalpha(int c);
 int	ft_isdigit(int c);
 int	ft_isalnum(int c);
-
+size_t		ft_strlen(const char *s);
 #endif
