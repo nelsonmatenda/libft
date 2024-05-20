@@ -1,41 +1,50 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nfigueir <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/16 12:51:23 by nfigueir          #+#    #+#             */
-/*   Updated: 2024/05/17 10:18:52 by nfigueir         ###   ########.fr       */
+/*   Created: 2024/05/20 09:47:55 by nfigueir          #+#    #+#             */
+/*   Updated: 2024/05/20 10:37:55 by nfigueir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strncmp(const char *s1, const char *s2, size_t n)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-	size_t	i;
+	char	*join;
+	int		i;
+	int		j;
 
+	join = (char *)malloc(ft_strlen(s1) + ft_strlen(s2) + 1);
+	if (!join)
+		return (NULL);
 	i = 0;
-	while (s1[i] == s2[i])
+	j = 0;
+	while (s1[j])
 	{
-		if ((i == n - 1) || (!s1[i] && !s2[i]))
-			return (0);
+		join[i] = *(s1 + j);
 		i++;
+		j++;
 	}
-	printf
-	return (s1[i] - s2[i]);
+	j = 0;
+	while (s2[j])
+	{
+		join[i] = *(s2 + j);
+		i++;
+		j++;
+	}
+	join[i] = 0;
+	return (join);
 }
 
-//int main()
+//int main(int ac, char **av)
 //{
-//	char *s1 = "asdfgh";
-//	char *s2 = "asd6fgh";
-//	int t = ft_strncmp(s1, s2, 3);
-//	printf("retorno:%d\n", t);
-//	if (t == 0) 
-//		printf("sim");
+//	if (ac > 1)
+//		printf("foi joinado: %s", ft_strjoin(av[1], av[2]));
 //	else
-//		printf("nao");
+//	printf("2 arg");
 //	return 0;
 //}

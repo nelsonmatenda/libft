@@ -6,7 +6,7 @@
 /*   By: nfigueir <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/14 10:13:54 by nfigueir          #+#    #+#             */
-/*   Updated: 2024/05/19 23:39:53 by nfigueir         ###   ########.fr       */
+/*   Updated: 2024/05/20 11:41:47 by nfigueir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,4 +24,6 @@ int	ft_isalnum(int c);
 void    ft_bzero(void *s, size_t n);
 size_t		ft_strlen(const char *s);
 void    *ft_calloc(size_t count, size_t size);
+size_t	ft_strlcpy(char *dst, const char *src, size_t size);
+char	*ft_strchr(const char *s, int c);
 #endif

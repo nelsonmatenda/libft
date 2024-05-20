@@ -1,20 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_tolower.c                                       :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nfigueir <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/16 10:40:01 by nfigueir          #+#    #+#             */
-/*   Updated: 2024/05/17 07:24:37 by nfigueir         ###   ########.fr       */
+/*   Created: 2024/05/17 10:20:01 by nfigueir          #+#    #+#             */
+/*   Updated: 2024/05/17 13:07:24 by nfigueir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_tolower(int c)
+void	*ft_memchar(const void *s, int c, size_t n)
 {
-	if (c >= 'A' && c <= 'Z')
-		c += 32;
-	return (c);
+	size_t	i;
+
+	i = 0;
+	while (i < n)
+	{
+		if (*(unsigned char *)(s + i) == (unsigned char)c)
+			return ((void *)(s + i));
+		i++;
+	}
+	return (NULL);
 }
+
+//int	main(void)
+//{
+//	char s[] = "matenda@hotmail.com";
+//	char *domain = ft_memchar(s, '@', ft_strlen(s));
+//
+//	printf("domain: %s\n", domain);
+//	return (0);
+//}
