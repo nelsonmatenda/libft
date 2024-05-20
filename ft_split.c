@@ -6,13 +6,34 @@
 /*   By: nfigueir <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/20 12:23:20 by nfigueir          #+#    #+#             */
-/*   Updated: 2024/05/20 14:16:48 by nfigueir         ###   ########.fr       */
+/*   Updated: 2024/05/20 14:14:19 by nfigueir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_count_words(const char *s, char c)
+static int	ft_substr_len(char const *str, char c)
+{
+	int	i;
+
+	i = 0;
+	while (str[i] && str[i] != c)
+		i++;
+	return (i);
+}
+
+static char	**ft_free(char **strs, int i)
+{
+	while (i > 0)
+	{
+		free(strs[i]);
+		i--;
+	}
+	free(strs);
+	return (NULL);
+}
+
+static int	ft_count_substr(const char *s, char c)
 {
 	int	i;
 	int	count;
@@ -28,30 +49,50 @@ int	ft_count_words(const char *s, char c)
 			i++;
 			is_word = 0;
 		}
-		if (!(s[i] == c))
+		else
 		{
-			if (!is_word)
+			if (!is_word && s[i + 1])
 				count += 1;
 			is_word = 1;
+			i++;
 		}
-		i++;
 	}
 	return (count);
 }
 
 char	**ft_split(char const *s, char c)
 {
-	char	**splited;
-	int	words_nb;
+	char	**dst;
+	int		substr_len;
+	int		i;
 
-	splited = NULL;
-	words_nb = ft_count_words(s, ' ');
-	printf("%d", words_nb);
-	return (splited);
+	dst = malloc((ft_count_substr(s, c) + 1) * sizeof(char *));
+	if (!dst)
+		return (NULL);
+	i = 0;
+	while (*s)
+	{
+		substr_len = 0;
+		while (*s == c && *s)
+			s++;
+		substr_len = ft_substr_len(s, c);
+		if (substr_len)
+		{
+			dst[i] = ft_substr(s, 0, substr_len);
+			if (!dst[i])
+				return (ft_free(dst, i));
+			i++;
+		}
+		s += substr_len;
+	}
+	dst[i] = NULL;
+	return (dst);
 }
 
-int main()
+/*int main()
 {
-	ft_split("este é um , funciona", ' ');
+	char **v = ft_split(" ", ' ');
+	while(*v)
+		printf("%s\n", *v++);
 	return (0);
-}
+}*/
