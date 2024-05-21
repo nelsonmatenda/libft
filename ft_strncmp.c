@@ -6,7 +6,7 @@
 /*   By: nfigueir <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/16 12:51:23 by nfigueir          #+#    #+#             */
-/*   Updated: 2024/05/17 10:18:52 by nfigueir         ###   ########.fr       */
+/*   Updated: 2024/05/21 12:46:02 by nfigueir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,6 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 			return (0);
 		i++;
 	}
-	printf
 	return (s1[i] - s2[i]);
 }
 
