@@ -6,7 +6,7 @@
 /*   By: nfigueir <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/15 11:01:25 by nfigueir          #+#    #+#             */
-/*   Updated: 2024/05/15 13:32:10 by nfigueir         ###   ########.fr       */
+/*   Updated: 2024/05/21 16:47:38 by nfigueir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 		i = 0;
 		while (i < n)
 		{
-			d[n] = s[n];
+			d[i] = s[i];
 			i++;
 		}
 	}
@@ -42,6 +42,7 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 
 //int	main()
 //{
+//#include <stdio.h>
 //	char buffer[20] = "Hello, World!";
 //
 //    // Mover parte dos dados com memmove

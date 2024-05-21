@@ -6,7 +6,7 @@
 /*   By: nfigueir <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/21 09:42:25 by nfigueir          #+#    #+#             */
-/*   Updated: 2024/05/21 09:47:38 by nfigueir         ###   ########.fr       */
+/*   Updated: 2024/05/21 16:49:10 by nfigueir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,5 +21,5 @@ t_list	*ft_lstnew(void *content)
 		return (NULL);
 	new_node->content = content;
 	new_node->next = NULL;
-	return (new_list);
+	return (new_node);
 }

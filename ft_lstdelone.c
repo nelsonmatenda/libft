@@ -6,11 +6,11 @@
 /*   By: nfigueir <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/21 10:03:26 by nfigueir          #+#    #+#             */
-/*   Updated: 2024/05/21 10:05:57 by nfigueir         ###   ########.fr       */
+/*   Updated: 2024/05/21 16:56:42 by nfigueir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "linft.h"
+#include "libft.h"
 
 void	ft_lstdelone(t_list *lst, void (*del)(void *))
 {

@@ -6,11 +6,11 @@
 /*   By: nfigueir <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/21 09:51:35 by nfigueir          #+#    #+#             */
-/*   Updated: 2024/05/21 09:54:27 by nfigueir         ###   ########.fr       */
+/*   Updated: 2024/05/21 16:55:00 by nfigueir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "linft.h"
+#include "libft.h"
 
 int	ft_lstsize(t_list *lst)
 {
