@@ -6,7 +6,7 @@
 /*   By: nfigueir <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/19 22:46:55 by nfigueir          #+#    #+#             */
-/*   Updated: 2024/05/19 23:09:14 by nfigueir         ###   ########.fr       */
+/*   Updated: 2024/05/21 22:31:11 by nfigueir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ void	*ft_calloc(size_t count, size_t size)
 {
 	void	*ptr;
 
+	if (count != 0 && (size > (4294967296 / count)))
+		return (NULL);
 	ptr = (void *)malloc(count * size);
 	if (!ptr)
 		return (NULL);
