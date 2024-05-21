@@ -6,7 +6,7 @@
 /*   By: nfigueir <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/20 12:23:20 by nfigueir          #+#    #+#             */
-/*   Updated: 2024/05/20 14:14:19 by nfigueir         ###   ########.fr       */
+/*   Updated: 2024/05/21 08:03:18 by nfigueir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -89,10 +89,10 @@ char	**ft_split(char const *s, char c)
 	return (dst);
 }
 
-/*int main()
-{
-	char **v = ft_split(" ", ' ');
-	while(*v)
-		printf("%s\n", *v++);
-	return (0);
-}*/
+//int main()
+//{
+//	char **v = ft_split(" e agora, o que faço. Para continuar", ',');
+//	while(*v)
+//		printf("%s\n", *v++);
+//	return (0);
+//}
